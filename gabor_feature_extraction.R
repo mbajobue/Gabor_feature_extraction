@@ -1,5 +1,8 @@
 # Gabor feature extraction function
 
+library(wvtool)
+library(moments)
+
 gabor_feature_extraction <- function(img){
   
   gabor_mean_features <- numeric()
