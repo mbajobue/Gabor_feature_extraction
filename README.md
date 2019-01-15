@@ -13,7 +13,9 @@
 
 ### Gabor features
 
-Images are filtered with a set of 18  Gabor filters. Gabor filters are generated using 3 different wavelengths and 6 different orientations. 18 filtered images are obtained for each sample. The standard deviation, mean, kurtosis and skewness of the filtered images are computed. This forms a vector of 72 features for each sample image.
+The input image is filtered with a set of 18  Gabor filters. Gabor filters are generated using 3 different wavelengths and 6 different orientations. 18 filtered images are obtained for each sample. The standard deviation, mean, kurtosis and skewness of the filtered images are computed. This forms a vector of 72 features for each sample image.
+
+Input image should consist of the matrix corresponding to a single-channel digital image where each pixel is represented by a whole number ranging from 0 to 225.
 
 
 ### Spatial domain features
@@ -23,9 +25,9 @@ Other simple features are extracted from the spatial domain of the sample images
 
 ## Results
 
-Features are classified using support vector machines (SVM). 
+Features are classified using support vector machines (SVM). These results are comparable to those obtained by using convolutional neural networks (CNN).
 
 |Dataset|Accuracy|
 |---|---|
 |MNIST|98%|
-|Reduced MNIST (4000 sample)|95%|
+|Reduced MNIST (4000 samples)|95%|
